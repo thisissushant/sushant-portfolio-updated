@@ -1,19 +1,19 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import PageHeader from "@/components/PageHeader";
-import ExperienceTimeline from "@/components/ExperienceTimeline";
+import SkillTags from "@/components/SkillTags";
 
-const Experience = () => {
+const Skills = () => {
   return (
     <div className="min-h-screen bg-background">
       <Navbar />
       <div className="section-container">
         <PageHeader
-          title="Experience"
-          subtitle="4+ years building production applications across healthcare, e-commerce, and AI."
+          title="Skills"
+          subtitle="Technologies and tools I work with daily."
         />
         <div className="pb-16 max-w-3xl">
-          <ExperienceTimeline />
+          <SkillTags />
         </div>
       </div>
       <Footer />
@@ -21,4 +21,4 @@ const Experience = () => {
   );
 };
 
-export default Experience;
+export default Skills;

@@ -1,0 +1,45 @@
+import { FolderGit, BookUser, Phone, Globe } from "lucide-react";
+
+const Footer = () => {
+  return (
+    <footer className="border-t border-border">
+      <div className="section-container py-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <p className="text-sm text-muted-foreground">
+          © {new Date().getFullYear()} Sushant Singh. Built with precision.
+        </p>
+        <div className="flex items-center gap-3">
+          <a
+            href="tel:+919565441245"
+            className="p-2 rounded-md text-muted-foreground hover:text-foreground hover:bg-secondary transition-colors"
+          >
+            <Phone size={16} />
+          </a>
+          <a
+            href="https://github.com/thisissushant"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="p-2 rounded-md text-muted-foreground hover:text-foreground hover:bg-secondary transition-colors"
+          >
+            <FolderGit size={16} />
+          </a>
+          <a
+            href="https://linkedin.com/in/sushantbibhu"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="p-2 rounded-md text-muted-foreground hover:text-foreground hover:bg-secondary transition-colors"
+          >
+            <BookUser size={16} />
+          </a>
+          <a
+            href="#"
+            className="p-2 rounded-md text-muted-foreground hover:text-foreground hover:bg-secondary transition-colors"
+          >
+            <Globe size={16} />
+          </a>
+        </div>
+      </div>
+    </footer>
+  );
+};
+
+export default Footer;
