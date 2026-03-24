@@ -1,18 +1,59 @@
+"use client";
 import { motion } from "framer-motion";
 import { FolderGit, BookUser, Download, FolderOpen } from "lucide-react";
 import { Link } from "react-router-dom";
+import { WebcamPixelGrid } from "@/components/ui/webcam-pixel-grid";
+import { TypewriterEffectSmooth } from "@/components/ui/typewriter-effect";
 
 const HeroSection = () => {
+  const words = [
+    {
+      text: "Sushant",
+      className: "text-white dark:text-blue-500",
+    },
+    {
+      text: "Singh",
+      className: "text-white dark:text-blue-500",
+    },
+    {
+      text: "Software",
+      className: "text-blue-500 dark:text-blue-500",
+    },
+    {
+      text: "Engineer",
+      className: "text-blue-500 dark:text-blue-500",
+    },
+  ];
   return (
-    <section className="hero-gradient relative min-h-[70vh] flex items-center pt-16">
+    <section className="hero-gradient relative min-h-[100vh] flex items-center pt-16">
       {/* Subtle grid pattern */}
-      <div
+      {/* <div
         className="absolute inset-0 opacity-[0.03]"
         style={{
           backgroundImage: `linear-gradient(hsl(var(--foreground)) 1px, transparent 1px), linear-gradient(90deg, hsl(var(--foreground)) 1px, transparent 1px)`,
           backgroundSize: "60px 60px",
         }}
-      />
+      /> */}
+      <div className="absolute inset-0">
+        <WebcamPixelGrid
+          gridCols={60}
+          gridRows={40}
+          maxElevation={50}
+          motionSensitivity={0.25}
+          elevationSmoothing={0.2}
+          colorMode="webcam"
+          backgroundColor="#030303"
+          mirror={true}
+          gapRatio={0.05}
+          invertColors={false}
+          darken={0.6}
+          borderColor="#ffffff"
+          borderOpacity={0.06}
+          className="w-full h-full"
+          onWebcamReady={() => console.log("Webcam ready!")}
+          onWebcamError={(err) => console.error("Webcam error:", err)}
+        />
+      </div>
 
       <div className="section-container relative z-10 py-20">
         <motion.div
@@ -32,9 +73,8 @@ const HeroSection = () => {
           </motion.div>
 
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-foreground mb-4">
-            Sushant Singh
+            <TypewriterEffectSmooth words={words} />
           </h1>
-
           <p className="text-lg sm:text-xl text-primary font-medium mb-4">
             SDE-II | React Native & Next.js Engineer
           </p>
