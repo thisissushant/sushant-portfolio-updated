@@ -22,7 +22,7 @@ const MetroTile = ({
   delay = 0,
 }: MetroTileProps) => {
   const sizeClasses = {
-    small: "col-span-1 row-span-1",
+    small: "col-span-2 row-span-1",
     medium: "col-span-1 sm:col-span-2 row-span-1",
     large: "col-span-1 sm:col-span-2 row-span-1 lg:row-span-2",
   };

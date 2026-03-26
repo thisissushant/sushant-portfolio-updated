@@ -5,10 +5,8 @@ import {
   FolderGit2,
   GraduationCap,
   Mail,
-  Award,
 } from "lucide-react";
 import MetroTile from "./MetroTile";
-import { BackgroundBeams } from "./ui/background-beams";
 
 const tiles = [
   {
@@ -24,10 +22,10 @@ const tiles = [
     icon: Briefcase,
     title: "Experience",
     summary:
-      "Mediversal, MexicaNFT, Easework AI, The Trendy — 4+ years building production apps.",
+      "Mediversal Healthcare, MexicaNFT, Easework AI, The Trendy — 2+ years building production apps.",
     to: "/experience",
     size: "large" as const,
-    stat: "4+ years",
+    stat: "2+ years",
   },
   {
     icon: Code2,
@@ -59,14 +57,6 @@ const tiles = [
     to: "/contact",
     size: "small" as const,
   },
-  {
-    icon: Award,
-    title: "Impact",
-    summary: "9,000+ orders, ₹90L+ revenue, 30% sales boost.",
-    to: "/experience",
-    size: "small" as const,
-    stat: "₹90L+",
-  },
 ];
 
 const TileGrid = () => {
@@ -77,7 +67,6 @@ const TileGrid = () => {
           <MetroTile key={tile.title} {...tile} delay={i * 0.08} />
         ))}
       </div>
-      <BackgroundBeams />
     </section>
   );
 };
