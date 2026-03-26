@@ -2,10 +2,13 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import PageHeader from "@/components/PageHeader";
 import ExperienceTimeline from "@/components/ExperienceTimeline";
+import { BackgroundBeams } from "@/components/ui/background-beams";
 
 const Experience = () => {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen ">
+      <BackgroundBeams />
+
       <Navbar />
       <div className="section-container">
         <PageHeader

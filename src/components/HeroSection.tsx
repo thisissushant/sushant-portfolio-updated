@@ -1,6 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
-import { FolderGit, BookUser, Download, FolderOpen } from "lucide-react";
+import { Download, FolderOpen } from "lucide-react";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { WebcamPixelGrid } from "@/components/ui/webcam-pixel-grid";
 import { TypewriterEffectSmooth } from "@/components/ui/typewriter-effect";
@@ -17,11 +18,11 @@ const HeroSection = () => {
     },
     {
       text: "Software",
-      className: "text-blue-500 dark:text-blue-500",
+      className: "text-gradient dark:text-blue-500",
     },
     {
       text: "Engineer",
-      className: "text-blue-500 dark:text-blue-500",
+      className: "text-gradient dark:text-blue-500",
     },
   ];
   return (
@@ -68,22 +69,23 @@ const HeroSection = () => {
             transition={{ delay: 0.2 }}
             className="inline-flex items-center gap-2 px-3 py-1.5 rounded-md bg-primary/10 border border-primary/20 text-primary text-sm font-medium mb-6"
           >
-            <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
+            <span className="w-2 h-2 rounded-full bg-primary animate-pulse pulse-red bg-green-600" />
             Available for opportunities
           </motion.div>
 
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-foreground mb-4">
             <TypewriterEffectSmooth words={words} />
           </h1>
-          <p className="text-lg sm:text-xl text-primary font-medium mb-4">
-            SDE-II | React Native & Next.js Engineer
+          <p className="text-lg sm:text-xl text-gradient font-medium mb-4">
+            SDE-II | Mediversal Healthcare
           </p>
 
           <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mb-8 leading-relaxed">
-            Building scalable cross-platform apps & dashboards for healthcare,
-            e-commerce and AI products.
+            Software Engineer specializing in building mobile applications for
+            both iOS and Android. Experienced in developing web applications
+            across multiple domains including Healthcare, Legal, and
+            Procurement.
           </p>
-
           <div className="flex flex-wrap items-center gap-3 mb-10">
             <Link
               to="/projects"
@@ -108,7 +110,7 @@ const HeroSection = () => {
               rel="noopener noreferrer"
               className="p-2.5 rounded-lg bg-secondary text-muted-foreground hover:text-foreground hover:bg-secondary/80 transition-all duration-200"
             >
-              <FolderGit size={18} />
+              <FaGithub size={18} />
             </a>
             <a
               href="https://linkedin.com/in/sushantbibhu"
@@ -116,7 +118,7 @@ const HeroSection = () => {
               rel="noopener noreferrer"
               className="p-2.5 rounded-lg bg-secondary text-muted-foreground hover:text-foreground hover:bg-secondary/80 transition-all duration-200"
             >
-              <BookUser size={18} />
+              <FaLinkedin size={18} />
             </a>
           </div>
         </motion.div>

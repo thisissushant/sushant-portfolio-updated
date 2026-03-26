@@ -4,6 +4,7 @@ import ImpactMetrics from "@/components/ImpactMetrics";
 import TileGrid from "@/components/TileGrid";
 import FeaturedWork from "@/components/FeaturedWork";
 import Footer from "@/components/Footer";
+import { BackgroundBeams } from "@/components/ui/background-beams";
 
 const Index = () => {
   return (
@@ -14,6 +15,7 @@ const Index = () => {
       <TileGrid />
       <FeaturedWork />
       <Footer />
+      <BackgroundBeams />
     </div>
   );
 };

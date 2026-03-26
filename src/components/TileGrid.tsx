@@ -8,6 +8,7 @@ import {
   Award,
 } from "lucide-react";
 import MetroTile from "./MetroTile";
+import { BackgroundBeams } from "./ui/background-beams";
 
 const tiles = [
   {
@@ -76,6 +77,7 @@ const TileGrid = () => {
           <MetroTile key={tile.title} {...tile} delay={i * 0.08} />
         ))}
       </div>
+      <BackgroundBeams />
     </section>
   );
 };

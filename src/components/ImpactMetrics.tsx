@@ -1,17 +1,16 @@
 import { motion } from "framer-motion";
-import { Clock, ShoppingBag, TrendingUp, Smartphone } from "lucide-react";
+import { Clock, ShoppingBag, Smartphone } from "lucide-react";
 
 const metrics = [
-  { icon: Clock, label: "Years Experience", value: "4+" },
-  { icon: ShoppingBag, label: "Orders Handled", value: "9,000+" },
-  { icon: TrendingUp, label: "Revenue Impact", value: "₹90L+" },
-  { icon: Smartphone, label: "Apps Shipped", value: "iOS + Android" },
+  { icon: Clock, label: "Years Experience", value: "2+" },
+  { icon: Smartphone, label: "Apps Shipped", value: "3+" },
+  { icon: ShoppingBag, label: "Projects Worked On", value: "10+" },
 ];
 
 const ImpactMetrics = () => {
   return (
     <section className="section-container py-12">
-      <div className="grid grid-cols-2 lg:grid-cols-4 gap-3">
+      <div className="grid grid-cols-2 lg:grid-cols-3 gap-3">
         {metrics.map((m, i) => (
           <motion.div
             key={m.label}
