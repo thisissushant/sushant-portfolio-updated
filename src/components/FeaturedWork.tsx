@@ -12,7 +12,7 @@ const features = [
   { icon: Pill, label: "Pharmacy" },
   { icon: FlaskConical, label: "Lab Tests" },
   { icon: HeartPulse, label: "Homecare" },
-  { icon: Video, label: "Doctor Consultations" },
+  { icon: Video, label: "Consultations" },
   { icon: CreditCard, label: "Payments" },
   { icon: Truck, label: "Logistics" },
 ];
@@ -32,14 +32,18 @@ const FeaturedWork = () => {
             <span className="text-xs font-semibold text-primary uppercase tracking-wider">
               Featured Work
             </span>
+
             <h3 className="text-xl font-bold text-foreground mt-2 mb-2">
               Mediversal247
             </h3>
+
             <p className="text-sm text-muted-foreground leading-relaxed mb-5">
-              A comprehensive healthcare super-app for pharmacy, lab tests,
-              homecare services, and doctor video consultations — with
-              integrated payments and logistics.
+              Worked on a healthcare platform covering pharmacy, diagnostics,
+              homecare, and online consultations. Involved in building and
+              maintaining key features across the app, along with handling
+              deployments and ensuring smooth end-to-end operations.
             </p>
+
             <div className="grid grid-cols-2 sm:grid-cols-3 gap-2.5">
               {features.map((f, i) => (
                 <motion.div

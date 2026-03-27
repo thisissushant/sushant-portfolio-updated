@@ -14,15 +14,15 @@ const experiences: Experience[] = [
     title: "SDE-II",
     company: "Mediversal Healthcare Pvt Ltd",
     location: "Patna",
-    period: "Apr 2025 – Current",
+    period: "Apr 2025 – Present",
     points: [
-      "Built Mediversal247 cross-platform app (Pharmacy, Lab Tests, Home Care, Doctor Consultation)",
-      "Built Admin Panel using Next.js + Tailwind + TypeScript",
-      "Auth via AWS Amplify + state management with Zustand",
-      "Agora Video SDK for doctor-patient video consultations",
-      "Razorpay payment integration & Shiprocket delivery tracking",
-      "Mixpanel analytics & location services integration",
-      "Managed Play Store + App Store releases",
+      "Worked on the Mediversal247 app covering pharmacy, lab tests, home care, and consultations",
+      "Built and maintained both mobile app and admin panel",
+      "Handled authentication, payments, and order tracking flows",
+      "Integrated video consultations between doctors and patients",
+      "Set up analytics and handled location-based features",
+      "Managed app releases on Play Store and App Store",
+      "Fixed production issues and ensured stable releases",
     ],
   },
   {
@@ -31,11 +31,11 @@ const experiences: Experience[] = [
     location: "Remote",
     period: "Sep 2024 – Mar 2025",
     points: [
-      "React Native + TypeScript + Tailwind UI from Figma designs",
-      "Built Reli AI mobile app architecture",
-      "Cypress end-to-end testing implementation",
-      "Landing pages in Next.js + Tailwind",
-      "Worked on client projects including Boston Scientific",
+      "Built mobile app screens based on design and product requirements",
+      "Worked on app structure and improved code organization",
+      "Set up end-to-end testing for key user flows",
+      "Developed landing pages and handled UI updates",
+      "Contributed to client projects with regular feature updates and fixes",
     ],
   },
   {
@@ -44,10 +44,10 @@ const experiences: Experience[] = [
     location: "Remote",
     period: "May 2024 – Aug 2024",
     points: [
-      "Built React + JavaScript UI with Redux & Material UI",
-      "Firebase authentication integration",
-      "REST API integration with Axios",
-      "Flutter-flow / Streamlit for MVP demos",
+      "Worked on UI development and basic state management",
+      "Integrated APIs and handled data flow in the app",
+      "Implemented authentication and user flows",
+      "Helped build quick demo versions for internal use",
     ],
   },
   {
@@ -56,10 +56,11 @@ const experiences: Experience[] = [
     location: "Jaipur",
     period: "Feb 2021 – Dec 2023",
     points: [
-      "Built sneaker e-commerce business using WordPress",
-      "Shiprocket logistics + Cashfree payments",
-      "Increased sales by 30%, delivered 9,000+ orders",
-      "Achieved ₹90L+ revenue, managed full e-commerce lifecycle",
+      "Built and managed a sneaker e-commerce store",
+      "Handled product listings, orders, and payments",
+      "Managed deliveries and customer orders end-to-end",
+      "Delivered over 9,000 orders and handled day-to-day operations",
+      "Maintained and updated the platform as the business grew",
     ],
   },
 ];
@@ -77,6 +78,7 @@ const ExperienceTimeline = () => {
           className="relative pl-14 pb-10 last:pb-0"
         >
           {i < experiences.length - 1 && <div className="timeline-line" />}
+
           <div className="timeline-dot absolute left-0 top-0">
             <Briefcase size={16} className="text-primary" />
           </div>
@@ -91,10 +93,12 @@ const ExperienceTimeline = () => {
                   {exp.company} · {exp.location}
                 </p>
               </div>
+
               <span className="text-xs text-muted-foreground font-medium bg-secondary px-2.5 py-1 rounded-md w-fit">
                 {exp.period}
               </span>
             </div>
+
             <ul className="space-y-1.5">
               {exp.points.map((point, j) => (
                 <li

@@ -7,15 +7,18 @@ const Skills = () => {
   return (
     <div className="min-h-screen bg-background">
       <Navbar />
+
       <div className="section-container">
         <PageHeader
           title="Skills"
-          subtitle="Technologies and tools I work with daily."
+          subtitle="Tools and technologies I use to build and ship applications."
         />
-        <div className="pb-16 max-w-3xl">
+
+        <div className="pb-16 max-w-4xl">
           <SkillTags />
         </div>
       </div>
+
       <Footer />
     </div>
   );

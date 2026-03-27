@@ -8,13 +8,15 @@ const About = () => {
   return (
     <div className="min-h-screen bg-background">
       <Navbar />
+
       <div className="section-container">
         <PageHeader
-          title="About Me"
-          subtitle="Cross-platform engineer focused on performance, scalable architecture, and product-quality UI."
+          title="About"
+          subtitle="Software engineer working across mobile and web, taking products from development to release."
         />
 
-        <div className="grid md:grid-cols-2 gap-6 pb-16">
+        <div className="grid md:grid-cols-2 gap-6 pb-10">
+          {/* Who I Am */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -24,19 +26,27 @@ const About = () => {
             <h3 className="text-lg font-semibold text-foreground mb-3">
               Who I Am
             </h3>
+
             <p className="text-sm text-muted-foreground leading-relaxed mb-4">
-              I'm Sushant Singh, an SDE-II specializing in React Native and
-              Next.js. With 4+ years of experience, I've built production apps
-              for healthcare, e-commerce, and AI products — shipping to both iOS
-              and Android.
+              I'm Sushant Singh, a software engineer with 2+ years of experience
+              building mobile and web applications. I work on both Android and
+              iOS apps, along with web platforms, and handle their deployment as
+              well.
             </p>
+
+            <p className="text-sm text-muted-foreground leading-relaxed mb-4">
+              In my current role, I’m involved in most parts of the product from
+              building features and fixing issues to releasing updates and
+              keeping things running smoothly.
+            </p>
+
             <p className="text-sm text-muted-foreground leading-relaxed">
-              I care deeply about clean architecture, performance optimization,
-              and creating UIs that feel native and polished. I've co-founded a
-              business that handled 9,000+ orders and generated ₹90L+ revenue.
+              I focus on writing clean code, keeping things simple, and making
+              sure the app works reliably in real use.
             </p>
           </motion.div>
 
+          {/* Education */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -51,6 +61,7 @@ const About = () => {
                 Education
               </h3>
             </div>
+
             <div className="space-y-2">
               <p className="text-sm font-medium text-foreground">
                 Swami Keshvanand Institute of Technology, Management & Gramothan
@@ -60,11 +71,35 @@ const About = () => {
               <p className="text-sm text-primary font-medium">
                 B.Tech in Information Technology
               </p>
-              <p className="text-xs text-muted-foreground">2017 – 2021</p>
             </div>
           </motion.div>
         </div>
+
+        {/* Additional Section to balance space */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.4 }}
+          className="metro-tile p-6 mb-16"
+        >
+          <h3 className="text-lg font-semibold text-foreground mb-3">
+            What I Work On
+          </h3>
+
+          <p className="text-sm text-muted-foreground leading-relaxed mb-3">
+            I’ve worked on healthcare apps, e-commerce platforms, and internal
+            tools. This includes building user-facing features, integrating
+            APIs, handling edge cases, and making sure everything works well
+            across devices.
+          </p>
+
+          <p className="text-sm text-muted-foreground leading-relaxed">
+            I also take care of app releases — preparing builds, managing store
+            updates, and fixing issues that come up after deployment.
+          </p>
+        </motion.div>
       </div>
+
       <Footer />
     </div>
   );

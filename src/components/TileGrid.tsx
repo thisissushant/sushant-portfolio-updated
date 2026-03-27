@@ -11,49 +11,50 @@ import MetroTile from "./MetroTile";
 const tiles = [
   {
     icon: User,
-    title: "About Me",
+    title: "Who I Am",
     summary:
-      "Cross-platform engineer focused on performance, scalable architecture, and product-quality UI.",
+      "Software engineer building mobile and web apps, handling everything from development to deployment across Android, iOS, and the web.",
     to: "/about",
     size: "large" as const,
     stat: "SDE-II",
   },
   {
     icon: Briefcase,
-    title: "Experience",
+    title: "Work Journey",
     summary:
-      "Mediversal Healthcare, MexicaNFT, Easework AI, The Trendy — 2+ years building production apps.",
+      "Worked with Mediversal Healthcare, MexicaNFT, Easework AI, and The Trendy — building and shipping products for over 2+ years.",
     to: "/experience",
     size: "large" as const,
     stat: "2+ years",
   },
   {
     icon: Code2,
-    title: "Skills",
+    title: "Technical Strengths",
     summary:
-      "React Native, Next.js, TypeScript, AWS, APIs, Testing — full-stack mobile & web.",
+      "Strong foundation in developing, building, and maintaining applications across platforms with a focus on performance and clean architecture.",
     to: "/skills",
     size: "medium" as const,
   },
   {
     icon: FolderGit2,
-    title: "Projects",
+    title: "Things I’ve Built",
     summary:
-      "Sneaker E-commerce platform built with Next.js, Prisma & MongoDB.",
+      "Built and shipped multiple projects including the Mediversal247 app, e-commerce platforms, and npm packages across both professional and personal work.",
     to: "/projects",
     size: "medium" as const,
   },
   {
     icon: GraduationCap,
     title: "Education",
-    summary: "B.Tech IT, SKIT Jaipur (2017–2021)",
+    summary: "B.Tech in Information Technology from SKIT Jaipur",
     to: "/about",
     size: "small" as const,
   },
   {
     icon: Mail,
-    title: "Contact",
-    summary: "Phone, LinkedIn, GitHub, Email.",
+    title: "Get in Touch",
+    summary:
+      "Open to opportunities and collaborations — feel free to connect via phone, LinkedIn, GitHub, or email.",
     to: "/contact",
     size: "small" as const,
   },

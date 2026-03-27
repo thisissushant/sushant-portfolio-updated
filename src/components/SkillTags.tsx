@@ -7,71 +7,68 @@ interface SkillCategory {
 
 const categories: SkillCategory[] = [
   {
-    title: "Mobile Development",
+    title: "Mobile",
     skills: [
-      "React Native CLI",
+      "React Native",
       "Expo",
       "Android",
       "iOS",
-      "Xcode",
-      "Android Studio",
-      "React Navigation",
-      "AsyncStorage",
-      "Expo Router",
+      "Native Modules",
+      "Notifications",
     ],
   },
   {
-    title: "Frontend",
+    title: "Web",
     skills: [
-      "ReactJS",
-      "NextJS",
-      "TailwindCSS",
-      "Bootstrap",
-      "React Router",
+      "React",
+      "Next.js",
+      "Tailwind CSS",
       "Zustand",
-      "Context API",
-      "Styled Components",
+      "Routing",
+      "SSR",
+      "Svelet",
     ],
   },
   {
     title: "Languages",
-    skills: ["JavaScript", "TypeScript", "C", "HTML", "CSS"],
+    skills: ["JavaScript", "TypeScript", "C", "Bash Scripting"],
   },
   {
     title: "Backend & APIs",
-    skills: [
-      "NodeJS",
-      "ExpressJS",
-      "Socket.io",
-      "REST API",
-      "GraphQL",
-      "Firebase",
-      "WebSockets",
-    ],
+    skills: ["Node.js", "Express", "REST APIs", "WebSockets", "Firebase"],
   },
   {
-    title: "Databases",
-    skills: ["MongoDB", "Firebase Realtime DB", "SQLite"],
+    title: "Data",
+    skills: ["MongoDB", "SQLite"],
   },
   {
-    title: "Cloud & DevOps",
-    skills: [
-      "AWS Amplify",
-      "EC2",
-      "S3",
-      "App Store Connect",
-      "Google Play Console",
-    ],
+    title: "Cloud & Infrastructure",
+    skills: ["AWS", "EC2", "S3", "VPC", "CloudFormation", "Terraform"],
+  },
+  {
+    title: "Release & Deployment",
+    skills: ["Play Store", "App Store", "Build & Release", "AWS Amplify"],
   },
   {
     title: "Testing & Tools",
-    skills: ["Jest", "Cypress", "Git", "GitHub Actions", "Fastlane"],
+    skills: [
+      "Jest",
+      "Cypress",
+      "Git",
+      "Agora",
+      "Figma",
+      "Postman",
+      "Mixpannel",
+      "Sentry",
+      "GitHub Actions",
+      "CI/CD",
+    ],
   },
 ];
 
 const SkillTags = () => {
   return (
-    <div className="space-y-8">
+    <div className="grid sm:grid-cols-2 gap-4">
       {categories.map((cat, i) => (
         <motion.div
           key={cat.title}
@@ -79,13 +76,18 @@ const SkillTags = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.4, delay: i * 0.08 }}
+          className="metro-tile p-5"
         >
-          <h3 className="text-sm font-semibold text-primary uppercase tracking-wider mb-3">
+          <h3 className="text-sm font-semibold text-foreground mb-3">
             {cat.title}
           </h3>
+
           <div className="flex flex-wrap gap-2">
             {cat.skills.map((skill) => (
-              <span key={skill} className="skill-chip">
+              <span
+                key={skill}
+                className="text-xs px-3 py-1 rounded-md bg-secondary text-secondary-foreground"
+              >
                 {skill}
               </span>
             ))}
