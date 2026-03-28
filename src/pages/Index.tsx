@@ -4,18 +4,18 @@ import ImpactMetrics from "@/components/ImpactMetrics";
 import TileGrid from "@/components/TileGrid";
 import FeaturedWork from "@/components/FeaturedWork";
 import Footer from "@/components/Footer";
-// import { BackgroundBeams } from "@/components/ui/background-beams";
+import { BackgroundBeams } from "@/components/ui/background-beams";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen">
       <Navbar />
       <HeroSection />
       <ImpactMetrics />
       <TileGrid />
       <FeaturedWork />
       <Footer />
-      {/* <BackgroundBeams /> */}
+      <BackgroundBeams />
     </div>
   );
 };

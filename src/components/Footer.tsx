@@ -1,4 +1,5 @@
-import { FolderGit, BookUser, Phone, Globe } from "lucide-react";
+import { Phone } from "lucide-react";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 const Footer = () => {
   return (
@@ -20,7 +21,7 @@ const Footer = () => {
             rel="noopener noreferrer"
             className="p-2 rounded-md text-muted-foreground hover:text-foreground hover:bg-secondary transition-colors"
           >
-            <FolderGit size={16} />
+            <FaGithub size={16} />
           </a>
           <a
             href="https://linkedin.com/in/sushantbibhu"
@@ -28,13 +29,7 @@ const Footer = () => {
             rel="noopener noreferrer"
             className="p-2 rounded-md text-muted-foreground hover:text-foreground hover:bg-secondary transition-colors"
           >
-            <BookUser size={16} />
-          </a>
-          <a
-            href="#"
-            className="p-2 rounded-md text-muted-foreground hover:text-foreground hover:bg-secondary transition-colors"
-          >
-            <Globe size={16} />
+            <FaLinkedin size={16} />
           </a>
         </div>
       </div>

@@ -2,62 +2,137 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import PageHeader from "@/components/PageHeader";
 import { motion } from "framer-motion";
-import { Phone, Mail, FolderGit, BookUser, Globe, Send } from "lucide-react";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 
-const contactLinks = [
-  { icon: Phone, label: "+91 9565441245", href: "tel:+919565441245" },
-  { icon: Mail, label: "Get in touch", href: "mailto:sushant@example.com" },
+import { Phone, Mail, ArrowUpRight } from "lucide-react";
+
+const primaryContacts = [
   {
-    icon: FolderGit,
-    label: "github.com/thisissushant",
+    icon: Mail,
+    label: "Email",
+    value: "sushantbibhu@gmail.com",
+    href: "mailto:sushantbibhu@gmail.com",
+  },
+  {
+    icon: Phone,
+    label: "Phone",
+    value: "+91 9565441245",
+    href: "tel:+919565441245",
+  },
+];
+
+const profiles = [
+  {
+    icon: FaGithub,
+    label: "GitHub",
+    value: "github.com/thisissushant",
     href: "https://github.com/thisissushant",
   },
   {
-    icon: BookUser,
-    label: "linkedin.com/in/sushantbibhu",
+    icon: FaLinkedin,
+    label: "LinkedIn",
+    value: "linkedin.com/in/sushantbibhu",
     href: "https://linkedin.com/in/sushantbibhu",
   },
-  { icon: Globe, label: "persional-portfolio.app", href: "#" },
 ];
 
 const Contact = () => {
   return (
     <div className="min-h-screen bg-background">
       <Navbar />
+
       <div className="section-container">
         <PageHeader
           title="Contact"
-          subtitle="Let's connect — I'm open to exciting opportunities and collaborations."
+          subtitle="If you’d like to work together or have something in mind, feel free to reach out."
         />
 
-        <div className="pb-16 max-w-2xl">
-          <div className="grid gap-3">
-            {contactLinks.map((link, i) => (
+        <div className="pb-16 max-w-2xl space-y-6">
+          {/* Intro */}
+          <div className="metro-tile p-5">
+            <p className="text-sm text-muted-foreground leading-relaxed">
+              I’m currently open to new opportunities and collaborations.
+              Whether it’s a full-time role, freelance work, or just a quick
+              discussion, I’m happy to connect.
+            </p>
+          </div>
+
+          {/* Primary Contact */}
+          <div className="space-y-3">
+            <h3 className="text-sm font-semibold text-foreground">
+              Reach out directly
+            </h3>
+
+            {primaryContacts.map((item, i) => (
               <motion.a
-                key={link.label}
-                href={link.href}
-                target={link.href.startsWith("http") ? "_blank" : undefined}
-                rel="noopener noreferrer"
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: 0.15 + i * 0.08 }}
-                className="metro-tile p-4 flex items-center gap-4 group"
+                key={item.label}
+                href={item.href}
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.1 + i * 0.08 }}
+                className="metro-tile p-4 flex items-center justify-between group"
               >
-                <div className="p-2.5 rounded-lg bg-primary/10 text-primary group-hover:bg-primary/20 transition-colors">
-                  <link.icon size={18} />
+                <div className="flex items-center gap-3">
+                  <div className="p-2 rounded-md bg-primary/10 text-primary">
+                    <item.icon size={16} />
+                  </div>
+                  <div>
+                    <p className="text-xs text-muted-foreground">
+                      {item.label}
+                    </p>
+                    <p className="text-sm font-medium text-foreground">
+                      {item.value}
+                    </p>
+                  </div>
                 </div>
-                <span className="text-sm font-medium text-foreground">
-                  {link.label}
-                </span>
-                <Send
-                  size={14}
-                  className="ml-auto text-muted-foreground opacity-0 group-hover:opacity-100 transition-opacity"
+
+                <ArrowUpRight
+                  size={16}
+                  className="text-muted-foreground opacity-0 group-hover:opacity-100 transition-opacity"
+                />
+              </motion.a>
+            ))}
+          </div>
+
+          {/* Profiles */}
+          <div className="space-y-3">
+            <h3 className="text-sm font-semibold text-foreground">Profiles</h3>
+
+            {profiles.map((item, i) => (
+              <motion.a
+                key={item.label}
+                href={item.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.2 + i * 0.08 }}
+                className="metro-tile p-4 flex items-center justify-between group"
+              >
+                <div className="flex items-center gap-3">
+                  <div className="p-2 rounded-md bg-primary/10 text-primary">
+                    <item.icon size={16} />
+                  </div>
+                  <div>
+                    <p className="text-xs text-muted-foreground">
+                      {item.label}
+                    </p>
+                    <p className="text-sm font-medium text-foreground">
+                      {item.value}
+                    </p>
+                  </div>
+                </div>
+
+                <ArrowUpRight
+                  size={16}
+                  className="text-muted-foreground opacity-0 group-hover:opacity-100 transition-opacity"
                 />
               </motion.a>
             ))}
           </div>
         </div>
       </div>
+
       <Footer />
     </div>
   );

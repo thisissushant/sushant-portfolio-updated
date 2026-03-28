@@ -3,6 +3,7 @@ import Footer from "@/components/Footer";
 import PageHeader from "@/components/PageHeader";
 import { motion } from "framer-motion";
 import { ExternalLink } from "lucide-react";
+import { BackgroundBeams } from "@/components/ui/background-beams";
 
 const Projects = () => {
   return (
@@ -128,6 +129,7 @@ const Projects = () => {
           </motion.div>
         </div>
       </div>
+      <BackgroundBeams />
 
       <Footer />
     </div>

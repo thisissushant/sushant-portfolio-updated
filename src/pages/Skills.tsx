@@ -2,6 +2,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import PageHeader from "@/components/PageHeader";
 import SkillTags from "@/components/SkillTags";
+import { BackgroundBeams } from "@/components/ui/background-beams";
 
 const Skills = () => {
   return (
@@ -18,6 +19,7 @@ const Skills = () => {
           <SkillTags />
         </div>
       </div>
+      <BackgroundBeams />
 
       <Footer />
     </div>

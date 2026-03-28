@@ -3,10 +3,11 @@ import Footer from "@/components/Footer";
 import PageHeader from "@/components/PageHeader";
 import { motion } from "framer-motion";
 import { GraduationCap } from "lucide-react";
+import { BackgroundBeams } from "@/components/ui/background-beams";
 
 const About = () => {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen ">
       <Navbar />
 
       <div className="section-container">
@@ -99,6 +100,7 @@ const About = () => {
           </p>
         </motion.div>
       </div>
+      <BackgroundBeams />
 
       <Footer />
     </div>

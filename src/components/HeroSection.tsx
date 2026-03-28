@@ -5,6 +5,7 @@ import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { WebcamPixelGrid } from "@/components/ui/webcam-pixel-grid";
 import { TypewriterEffectSmooth } from "@/components/ui/typewriter-effect";
+import { LinkPreview } from "./ui/link-preview";
 
 const HeroSection = () => {
   const words = [
@@ -81,10 +82,9 @@ const HeroSection = () => {
           </p>
 
           <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mb-8 leading-relaxed">
-            Software Engineer specializing in building mobile applications for
-            both iOS and Android. Experienced in developing web applications
-            across multiple domains including Healthcare, Legal, and
-            Procurement.
+            Software Engineer building mobile applications for both iOS and
+            Android. Experienced in developing web applications across multiple
+            domains including Healthcare, Legal, and Procurement.
           </p>
           <div className="flex flex-wrap items-center gap-3 mb-10">
             <Link
@@ -104,14 +104,11 @@ const HeroSection = () => {
           </div>
 
           <div className="flex items-center gap-4">
-            <a
-              href="https://github.com/thisissushant"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="p-2.5 rounded-lg bg-secondary text-muted-foreground hover:text-foreground hover:bg-secondary/80 transition-all duration-200"
-            >
-              <FaGithub size={18} />
-            </a>
+            <LinkPreview url="https://github.com/thisissushant">
+              <span className="p-2.5 rounded-lg bg-secondary text-muted-foreground hover:text-foreground hover:bg-secondary/80 transition-all duration-200 inline-flex">
+                <FaGithub size={18} />
+              </span>
+            </LinkPreview>
             <a
               href="https://linkedin.com/in/sushantbibhu"
               target="_blank"
