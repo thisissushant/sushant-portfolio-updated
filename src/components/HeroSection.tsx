@@ -27,7 +27,7 @@ const HeroSection = () => {
     },
   ];
   return (
-    <section className="hero-gradient relative min-h-[100vh] flex items-center pt-16">
+    <section className="hero-gradient relative min-h-[100vh] flex items-center justify-center overflow-hidden">
       {/* Subtle grid pattern */}
       {/* <div
         className="absolute inset-0 opacity-[0.03]"
